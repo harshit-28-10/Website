@@ -32,6 +32,23 @@
   });
 </script>
 
+    <script>
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();  // Prevent actual form submission for demo purposes
+
+    // Push event to DataLayer
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      'event': 'formSubmit',
+      'formId': 'contact-form',
+      'formType': 'contact'
+    });
+
+    console.log("Form Submit Event Triggered");
+  });
+</script>
+
+
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
