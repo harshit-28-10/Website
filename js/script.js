@@ -9,26 +9,6 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
     });
 });
 
-<script>
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({
-  'event': 'addToCart',
-  'ecommerce': {
-    'currencyCode': 'USD',  // Specify the currency
-    'add': {                // 'add' actionFieldObject measures.
-      'products': [{
-        'name': 'T-shirt',    // Product name
-        'id': '12345',        // Product ID
-        'price': '25.99',     // Product price
-        'brand': 'BrandName', // Product brand
-        'category': 'Apparel',// Product category
-        'quantity': 1         // Quantity
-      }]
-    }
-  }
-});
-</script>
-
 
 // Purchase functionality
 document.getElementById('purchase-btn').addEventListener('click', () => {
