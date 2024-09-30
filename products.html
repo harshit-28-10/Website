@@ -37,14 +37,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <h2>Product 1</h2>
                 <img src="images/product1.jpg" alt="Product 1">
                 <p>$10.00</p>
-                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart('Product 1','12345','10.00')">Add to Cart</button>
             </article>
             
             <article class="product">
                 <h2>Product 2</h2>
                 <img src="images/product2.jpg" alt="Product 2">
                 <p>$15.00</p>
-                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart('Product 2, '12346', '15.00')">Add to Cart</button>
             </article>
             
             <button id="purchase-btn">Purchase</button>
@@ -72,30 +72,7 @@ function addToCart(productName, productId, productPrice) {
 }
 </script>
 
-    <script>
-// Generic Add to Cart function for multiple products
-function addToCart(productName, productId, productPrice) {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-        'event': 'addToCart',
-        'ecommerce': {
-            'currencyCode': 'USD',
-            'add': {
-                'products': [{
-                    'name': productName,
-                    'id': productId,
-                    'price': productPrice,
-                    'brand': 'BrandName',
-                    'category': 'CategoryName',
-                    'variant': 'Color/Size',
-                    'quantity': 1
-                }]
-            }
-        }
-    });
-    console.log('Add to cart event pushed to DataLayer for ' + productName);
-}
-</script>
+   
 
     <footer>
         <p>&copy; 2024 Business Name. All rights reserved.</p>
