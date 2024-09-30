@@ -9,7 +9,6 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
     });
 });
 
-
 // Purchase functionality
 document.getElementById('purchase-btn').addEventListener('click', () => {
     if (cart.length === 0) {
