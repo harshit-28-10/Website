@@ -51,6 +51,52 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </section>
     </main>
 
+    <script>
+// Generic Add to Cart function for multiple products
+function addToCart(productName, productId, productPrice) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'addToCart',
+        'ecommerce': {
+            'currencyCode': 'USD',
+            'add': {
+                'products': [{
+                    'name': productName,
+                    'id': productId,
+                    'price': productPrice,
+                }]
+            }
+        }
+    });
+    console.log('Add to cart event pushed to DataLayer for ' + productName);
+}
+</script>
+
+    <script>
+// Generic Add to Cart function for multiple products
+function addToCart(productName, productId, productPrice) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+        'event': 'addToCart',
+        'ecommerce': {
+            'currencyCode': 'USD',
+            'add': {
+                'products': [{
+                    'name': productName,
+                    'id': productId,
+                    'price': productPrice,
+                    'brand': 'BrandName',
+                    'category': 'CategoryName',
+                    'variant': 'Color/Size',
+                    'quantity': 1
+                }]
+            }
+        }
+    });
+    console.log('Add to cart event pushed to DataLayer for ' + productName);
+}
+</script>
+
     <footer>
         <p>&copy; 2024 Business Name. All rights reserved.</p>
     </footer>
