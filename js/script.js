@@ -1,4 +1,4 @@
-// Assuming you're using a data layer library like Google Tag Manager (GTM)
+
 document.addEventListener('DOMContentLoaded', function() {
     const addToCartButtons = document.querySelectorAll('.add-to-cart');
     const purchaseButton = document.getElementById('purchase-button');
